@@ -2,3 +2,16 @@ body {
     background-image: url('../../assets/home/background-home-mobile.jpg');
     background-size: cover;
 }
+
+h1 {
+    font-family: 'Bellefair', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 100px;
+    /* identical to box height, or 125% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
