@@ -13,13 +13,11 @@ function TopBar() {
                 <div className={css.logo}>
                     <Logo />
                 </div>
-                <button className={`${css.iconHamburger} ${isOpened ? '' : css.visible}`} onClick={() => setIsOpened(!isOpened)}>
-                    <IconHamburger />
+                <button className={css.iconHamburger} onClick={() => setIsOpened(!isOpened)}>
+                    <IconHamburger style={{ "display": (isOpened ? 'none' : 'block') }} />
+                    <IconClose style={{ "display": (isOpened ? 'block' : 'none') }} />
                 </button>
                 <nav className={`${isOpened ? css.visible : ''}`}>
-                    <button className={css.iconClose}>
-                        <IconClose />
-                    </button>
                     <ul>
                         <li><Link to={`./`}>HOME</Link></li>
                         <li><Link to={`./destination`}>DESTINATION</Link></li>

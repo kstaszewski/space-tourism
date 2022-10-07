@@ -10,28 +10,40 @@
 }
 
 .iconHamburger {
-    display: none;
     margin-left: auto;
     margin-right: 24px;
+    z-index: 100;
 }
 
-.iconHamburger.visible{
-    display: block;
-}
-
-nav{
+nav {
     display: flex;
     position: fixed;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     top: 0;
     right: 0;
+    width: 254px;
     height: 100%;
     background: var(--col-menuBackGround);
     backdrop-filter: var(--backdrop-menu);
     transform: translateX(100%);
-    transition: 0.5s;
+    transition: 0.7s;
 }
-nav.visible{
+
+nav.visible {
     transform: translateX(0)
+}
+
+nav>ul {
+    padding-left: 32px;
+    padding-top: 40%;
+}
+
+nav>ul>li {
+    counter-increment: menuItem;
+    padding: 16px 0;
+}
+
+nav>ul>li::before {
+    content: counters(menuItem, ".", decimal-leading-zero)' ';
 }
