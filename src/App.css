@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+div {
+  color: var(--col-text);
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -36,4 +40,15 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-family: 'Bellefair', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 100px;
+  /* identical to box height, or 125% */
+  text-align: center;
+  color: var(--col-text);
 }
