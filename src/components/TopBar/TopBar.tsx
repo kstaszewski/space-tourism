@@ -7,6 +7,7 @@ import { IconHamburger } from '../../assets/shared/icon-hamburger';
 
 function TopBar() {
     const [isOpened, setIsOpened] = useState(false);
+    const handleMenuClick = () => setIsOpened(false);
     return (
         <>
             <div className={css.container}>
@@ -19,10 +20,10 @@ function TopBar() {
                 </button>
                 <nav className={`${isOpened ? css.visible : ''}`}>
                     <ul>
-                        <li><Link to={`./`}>HOME</Link></li>
-                        <li><Link to={`./destination`}>DESTINATION</Link></li>
-                        <li><Link to={`./crew`}>CREW</Link></li>
-                        <li><Link to={`./technology`}>TECHNOLOGY</Link></li>
+                        <li><Link to={`/`} onClick={handleMenuClick}>HOME</Link></li>
+                        <li><Link to={`/destination`} onClick={handleMenuClick}>DESTINATION</Link></li>
+                        <li><Link to={`/crew`} onClick={handleMenuClick}>CREW</Link></li>
+                        <li><Link to={`/technology`} onClick={handleMenuClick}>TECHNOLOGY</Link></li>
                     </ul>
                 </nav>
             </div>

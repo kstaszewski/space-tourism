@@ -1,9 +1,50 @@
-body{
-    background-image: url('../../assets/destination/background-destination-mobile.jpg');
-    background-size: cover;
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-.container{
-
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 24px;
 }
 
+.planetSwitcher {
+    display: flex;
+    gap: 26px;
+}
+
+.planetBtn {
+    position: relative;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+}
+
+.planetBtn::after {
+    position: absolute;
+    content: "";
+    top: 140%;
+    left: -10%;
+    height: 2px;
+    width: 110%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+.planetBtn:hover::after,
+.planetBtn:focus::after,
+.active::after {
+    position: absolute;
+    content: "";
+    top: 140%;
+    left: -10%;
+    height: 2px;
+    width: 110%;
+    background-color: var(--col-text);
+}

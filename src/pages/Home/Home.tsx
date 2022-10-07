@@ -2,6 +2,7 @@ import React from 'react';
 import css from './Home.module.css';
 import { Link } from 'react-router-dom';
 import TextEntry from '../../components/TextEntry/TextEntry';
+import Background from '../../components/Background/Background';
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
           </Link>
         </div>
       </div>
+      <Background url={require('../../assets/home/background-home-mobile.jpg')} />
     </>
   );
 }

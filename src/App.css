@@ -3,14 +3,18 @@
   --col-text: #fff;
   --col-textGrey: #d0d6f9;
   --col-menuBackGround: rgba(255, 255, 255, 0.04);
+  --col-divider: #383B4B;
   /* backdrops */
-  --backdrop-menu: blur(40.7742px)
+  --backdrop-menu: blur(40.7742px);
+  /* borders */
+  --brd-divider: 1px solid var(--col-divider)
 }
 
 
 body {
   padding: 0;
   margin: 0;
+  background: black;
 }
 
 div {
@@ -18,8 +22,10 @@ div {
 }
 
 button {
+  padding: 0;
   background-color: transparent;
   border: none;
+  color: var(--col-text)
 }
 
 p {
@@ -43,12 +49,29 @@ li {
 }
 
 h1 {
+  margin: 16px 0;
+  padding: 0;
+
   font-family: 'Bellefair', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
-  line-height: 100px;
-  /* identical to box height, or 125% */
+  line-height: 125%;
   text-align: center;
   color: var(--col-text);
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 31px 0 0 1px;
+  padding: 0;
+
+  font-family: 'Bellefair';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  color: var(--col-text);
+  text-transform: uppercase;
 }

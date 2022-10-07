@@ -1,0 +1,16 @@
+.carouselWrapper {
+    display: flex;
+    align-self: flex-start;
+    gap: 48px;
+}
+
+.carouselElement {
+    width: calc(100vw - 48px);
+    text-align: center;
+    margin: 32px 0 26px 0;
+}
+
+.carouselElement>img {
+    width: 52%;
+    height: auto;
+}
