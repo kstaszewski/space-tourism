@@ -2,6 +2,20 @@
     display: flex;
     align-self: flex-start;
     gap: 48px;
+    transform: translateX(calc(-0vw));
+    transition: all 0.3s linear;
+}
+
+.carouselWrapper.first {
+    transform: translateX(calc(-100vw));
+}
+
+.carouselWrapper.second {
+    transform: translateX(calc(-200vw));
+}
+
+.carouselWrapper.third {
+    transform: translateX(calc(-300vw));
 }
 
 .carouselElement {

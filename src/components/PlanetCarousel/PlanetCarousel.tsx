@@ -10,7 +10,11 @@ type Props = {
 const PlanetCarousel = ({ data, selectedIndex }: Props) => {
     return (
         <>
-            <div className={css.carouselWrapper}>
+            <div className={`${css.carouselWrapper
+                } ${selectedIndex === 1 ? css.first : ""
+                } ${selectedIndex === 2 ? css.second : ""
+                } ${selectedIndex === 3 ? css.third : ""
+                }`}>
                 {data.map(planet => {
                     return (
                         <div key={planet.name} className={css.carouselElement}>
