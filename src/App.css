@@ -7,7 +7,8 @@
   /* backdrops */
   --backdrop-menu: blur(40.7742px);
   /* borders */
-  --brd-divider: 1px solid var(--col-divider)
+  --brd-divider: 1px solid var(--col-divider);
+  --brd-underline: 2px solid var(--col-divider);
 }
 
 
@@ -25,13 +26,20 @@ button {
   padding: 0;
   background-color: transparent;
   border: none;
-  color: var(--col-text)
+  color: var(--col-text);
+  font-size: clamp(.875rem, 2vw, 2rem);
+  line-height: 120%;
 }
 
 p {
-  color: var(--col-text);
   padding: 0;
   margin: 0;
+  font-size: clamp(.875rem, 2vw, 2rem);
+  line-height: 120%;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: var(--col-text);
 }
 
 a {
@@ -51,11 +59,10 @@ li {
 h1 {
   margin: 16px 0;
   padding: 0;
-
   font-family: 'Bellefair', sans-serif;
-  font-style: normal;
   font-weight: 400;
-  font-size: 80px;
+  /* font-size: 80px; */
+  font-size: clamp(5rem, 20vw, 9.375rem);
   line-height: 125%;
   text-align: center;
   color: var(--col-text);
@@ -65,12 +72,10 @@ h1 {
 h2 {
   margin: 31px 0 0 1px;
   padding: 0;
-
   font-family: 'Bellefair';
-  font-style: normal;
   font-weight: 400;
-  font-size: 56px;
-  line-height: 64px;
+  /* font-size: 56px; */
+  font-size: clamp(3.5rem, 15vw, 5rem);
   text-align: center;
   color: var(--col-text);
   text-transform: uppercase;

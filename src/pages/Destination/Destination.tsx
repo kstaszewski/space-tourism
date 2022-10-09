@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import css from './Destination.module.css';
 import TextEntry from '../../components/TextEntry/TextEntry';
-import PlanetInfo from '../../components/PlanetInfo/PlanetInfo';
+import PlanetInfoCarousel from '../../components/PlanetInfoCarousel/PlanetInfoCarousel';
 import Background from '../../components/Background/Background';
 import PlanetCarousel from '../../components/PlanetCarousel/PlanetCarousel';
 
@@ -61,7 +61,7 @@ function Destination() {
               );
             })}
           </div>
-          <PlanetInfo data={planets} selectedIndex={chosenPlanetIndex} />
+          <PlanetInfoCarousel data={planets} selectedIndex={chosenPlanetIndex} />
         </div>
       </div>
       <Background url={require('../../assets/destination/background-destination-mobile.jpg')} />

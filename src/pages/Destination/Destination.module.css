@@ -4,6 +4,17 @@
     overflow-x: hidden;
 }
 
+.container h1 {
+    margin: 31px 0 0 1px;
+    padding: 0;
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: clamp(3.5rem, 15vw, 5rem);
+    text-align: center;
+    color: var(--col-text);
+    text-transform: uppercase;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -19,10 +30,8 @@
 .planetBtn {
     position: relative;
     font-family: 'Barlow Condensed';
-    font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
+    line-height: 120%;
     letter-spacing: 2.3625px;
 }
 

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import css from './PlanetInfo.module.css';
+import css from './PlanetInfoCarousel.module.css';
 import { Planets } from '../../pages/Destination/Destination';
 import CarouselAnimateHandler from '../CarouselAnimateHandler/CarouselAnimateHandler';
 
@@ -8,7 +8,7 @@ type Props = {
   selectedIndex: number;
 };
 
-const PlanetInfo = ({ data, selectedIndex}: Props) => {
+const PlanetInfoCarousel = ({ data, selectedIndex}: Props) => {
 
   const reference = useRef<HTMLDivElement>(null);
 
@@ -23,7 +23,7 @@ const PlanetInfo = ({ data, selectedIndex}: Props) => {
         {data.map(planet => {
           return (
             <div key={planet.name} className={css.carouselElement}>
-              <h2>{planet.name}</h2>
+              <h1>{planet.name}</h1>
               <p className={css.description}>{planet.description}</p>
               <div className={css.divider}></div>
               <div className={css.paramWrapper}>
@@ -42,4 +42,4 @@ const PlanetInfo = ({ data, selectedIndex}: Props) => {
   );
 };
 
-export default PlanetInfo;
+export default PlanetInfoCarousel;

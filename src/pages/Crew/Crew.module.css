@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.crewSwitcher {
+    display: flex;
+    gap: 26px;
+}
+
+.crewBtn {
+    height: clamp(.625em, 2.5vw, .9375em);
+    width: clamp(.625em, 2.5vw, .9375em);
+    border-radius: 100px;
+    background: var(--col-text);
+    mix-blend-mode: normal;
+    opacity: 0.17;
+    transition: all .3s linear;
+}
+
+.crewBtn:focus,
+.crewBtn:hover,
+.crewBtn.active {
+    opacity: 1;
+}
