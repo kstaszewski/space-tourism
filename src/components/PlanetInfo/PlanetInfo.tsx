@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import css from './PlanetInfo.module.css';
 import { Planets } from '../../pages/Destination/Destination';
+import CarouselAnimateHandler from '../CarouselAnimateHandler/CarouselAnimateHandler';
 
 type Props = {
   data: Planets;
   selectedIndex: number;
 };
 
-const PlanetInfo = ({ data, selectedIndex }: Props) => {
+const PlanetInfo = ({ data, selectedIndex}: Props) => {
+
+  const reference = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    CarouselAnimateHandler({ reference, selectedIndex });
+  }, [selectedIndex]);
+
   return (
     <>
-      <div className={`${css.carouselWrapper
-        } ${selectedIndex === 1 ? css.first : ""
-        } ${selectedIndex === 2 ? css.second : ""
-        } ${selectedIndex === 3 ? css.third : ""
+      <div ref={reference} className={`${css.carouselWrapper
         }`}>
         {data.map(planet => {
           return (
